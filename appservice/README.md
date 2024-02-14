@@ -2,10 +2,10 @@
 
 App Servis / Frontdoor  Kontrol Listesi
          
-    1. Header temizlikleri yapılmalıdır 
-        a.  X-Powered-By: ASP.NET        
-         
-    2. Cache ayarları
+1. Header temizlikleri yapılmalıdır 
+        a.  X-Powered-By: ASP.NET
+   
+3. Cache ayarları
         a.  Ignore query yapılacak mı 
      
     3. Site conf ayaları
