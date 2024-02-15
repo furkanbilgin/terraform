@@ -61,22 +61,15 @@ resource "azurerm_windows_web_app" "app_service_api" {
     dotnet_version= "v4.0"
     } 
 
-     
-
-     ip_restriction{ 
-    action     = "Allow"
-    ip_address = "212.252.204.0/22"
-    name       = "polat_subnet"
-    priority   = 100
-    }  
-
-    ip_restriction{
-    #virtual_network_subnet_id = var.vnet_subnet_id
-    action     = "Allow"
-    ip_address = "10.102.30.0/23"
-    name       = "snet-Test-Service-00TR_subnet_id"
-    priority   = 101
-    }   
+  ip_restriction {
+      action   = "Allow"
+      priority = 200
+      headers {
+        x_azure_fdid = ["FRONT DOOR ID"]
+      }
+      service_tag = "AzureFrontDoor.Backend"
+      name        = "Access from Azure Front Door"
+    }
   }
 
   app_settings = {
