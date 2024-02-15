@@ -3,11 +3,11 @@ Ana main.tf dosyası içerisinde Modules içerisinde yazdığımız App Service 
 
 - modules
   - app-service
-     main.tf
-     variables.tf  
+    - main.tf
+    - variables.tf  
   - frontdoor
-     main.tf
-     variables.tf
+    - main.tf
+    - variables.tf
 main.tf
 variable.tf
 
